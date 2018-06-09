@@ -7,11 +7,12 @@ class Header extends Component {
       case null:
         return null
       case false:
-        return <li><a href='/auth/google'>Login with Google</a></li>
+        return <a href='/auth/google'>Login with Google</a>
       default:
         return <a href='/api/logout'>Logout</a>
     }
   }
+
   render () {
     console.log('auth:', this.props)
     return (
@@ -19,7 +20,7 @@ class Header extends Component {
         <div className='nav-wrapper'>
           <a href='/' className='left brand-logo'>Emaily</a>
           <ul id='nav-mobile' className='right'>
-            <li><a>{this.renderContent()}</a></li>
+            <li>{this.renderContent()}</li>
           </ul>
         </div>
       </nav>
